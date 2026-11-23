@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Значения по умолчанию = Classic menu. AnimatedBackground переключает их на лету. */
+  --brand: #e4412b; /* фирменный красно-оранжевый — для иконок на белом */
+  --accent: #ffe01a; /* жёлтые ценники, как на бумажном меню */
+  --accent-soft: #fff3a6;
+  --on-accent: #1a1a1a;
+  --fg: #ffffff;
+  --fg-muted: rgba(255, 255, 255, 0.82);
+  --bg-from: #f25c2a;
+  --bg-to: #e4412b;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--bg-to);
+}
+
+body {
+  @apply text-neutral-900 antialiased;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
